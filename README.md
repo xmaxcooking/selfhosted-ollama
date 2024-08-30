@@ -33,15 +33,22 @@ docker-compose up -d
 - Copy the provided settings file to the extension settings
 - (You may want to provide more specific instructions on where to find and how to copy the settings file)
 
+![Alt text](images/continue.png)
+
 5. Access the Ollama WebUI:
 - Open your browser and navigate to `http://localhost:8080`
 
 6. Download required models:
 - In the Ollama WebUI, go to the Admin Panel Settings
+
+![Alt text](images/admin.png)
+
 - Download the following models:
   - deepseek-coder:6.7b-base
   - llama3:8b
   - nomic-embed-text
+
+![Alt text](images/model.png)
 
 7. Start coding with your new self-hosted code assistant!
 
