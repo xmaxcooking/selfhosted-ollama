@@ -23,7 +23,7 @@ cd selfhosted-ollama
 docker-compose up -d
 ```
 
-3. Install the "Continue" VS Code extension:
+3. Install the [Continue VS Code extension](https://docs.continue.dev/quickstart):
 - Open VS Code
 - Go to the Extensions view (Ctrl+Shift+X)
 - Search for "Continue"
