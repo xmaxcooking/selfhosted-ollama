@@ -58,6 +58,6 @@ docker-compose up -d
 
 Find your perfect ollama models [here](https://ollama.com/library) and change the continue extension settings accordingly.
  
- Larged Models requiring more GPU resources include:
+ Large models requiring more GPU resources include:
   - deepseek-coder-v2:latest
   - mxbai-embed-large:latest
