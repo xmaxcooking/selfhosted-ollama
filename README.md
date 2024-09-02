@@ -10,15 +10,6 @@ This project provides a self-hosted alternative to GitHub Copilot using Ollama, 
 - [Supported GPU](https://github.com/ollama/ollama/blob/main/docs/gpu.md) + Cuda Toolkit for Nvidia
 - For AMD GPUs refere to the official [documentation](https://docs.openwebui.com/getting-started/#docker-compose)
 
-The following setup instructions use a docker-compsoe file for Nvidia GPU-Support.
-
-Please refer to the official documentation [here](https://docs.openwebui.com/getting-started/#docker-compose) if you're using an AMD GPU or remove the relevant resources in the compsoe file
-to run CPU-only.
-
-Check the list of supported GPUs [here](https://github.com/ollama/ollama/blob/main/docs/gpu.md)
-
-
-
 ## Setup Instructions
 
 1. Clone the repository:
