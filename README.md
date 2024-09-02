@@ -8,6 +8,11 @@ This project provides a self-hosted alternative to GitHub Copilot using Ollama, 
 - Visual Studio Code
 - Git
 
+The following setup instructions use a docker-compsoe file for Nvidia GPU-Support.
+
+Please refer to the official documentation [here](https://docs.openwebui.com/getting-started/#docker-compose) if you're using an AMD GPU or remove the relevant resources in the compsoe file
+to run CPU-only.
+
 ## Setup Instructions
 
 1. Clone the repository:
@@ -27,34 +32,35 @@ docker-compose up -d
 - Open VS Code
 - Go to the Extensions view (Ctrl+Shift+X)
 - Search for "Continue"
-- Install the pre-release version of the extension
+- Install the the extension
+- Switch to the pre-release version! (last checked 29.8.2024)
 
 4. Configure the "Continue" extension:
 - Copy the provided settings file to the extension settings
-- (You may want to provide more specific instructions on where to find and how to copy the settings file)
 
 ![Alt text](images/continue.png)
 
-5. Access the Ollama WebUI:
+1. Access the Ollama WebUI:
 - Open your browser and navigate to `http://localhost:8080`
 
-6. Download required models:
+1. Download required models:
 - In the Ollama WebUI, go to the Admin Panel Settings
 
 ![Alt text](images/admin.png)
 
 - Download the following models:
-  - deepseek-coder:6.7b-base
+  - deepseek-coder-v2:latest
   - llama3:8b
-  - nomic-embed-text
+  - mxbai-embed-large:latest
 
 ![Alt text](images/model.png)
 
-7. Start coding with your new self-hosted code assistant!
+1. Start coding with your new self-hosted code assistant!
 
-## Usage
+## Models
 
-Alternative to using github copilot and cursor IDE.
+Find your perfect ollama models [here](https://ollama.com/library) and change the continue extension settings accordingly.
  
- 
- 
+ Larged Models requiring more GPU resources include:
+  - deepseek-coder-v2:latest
+  - mxbai-embed-large:latest

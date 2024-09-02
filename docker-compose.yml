@@ -1,25 +1,26 @@
-services:
-  webui:
-    image: ghcr.io/open-webui/open-webui:latest
-    ports:
-     - 8080:8080/tcp
-    environment:
-     - OLLAMA_BASE_URL=http://ollama:11434
-    volumes:
-      - ./webui:/app/backend/data
-    depends_on:
-     - ollama
+  services:
+    webui:
+      image: ghcr.io/open-webui/open-webui:latest
+      ports:
+      - 8080:8080/tcp
+      environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - WEBUI_AUTH=false
+      volumes:
+        - ./webui:/app/backend/data
+      depends_on:
+      - ollama
 
-  ollama:
-    image: ollama/ollama:latest
-    ports:
-     - 11434:11434/tcp
-    volumes:
-      - ./ollama:/root/.ollama  
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    ollama:
+      image: ollama/ollama:latest
+      ports:
+      - 11434:11434/tcp
+      volumes:
+        - ./ollama:/root/.ollama  
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [gpu]
